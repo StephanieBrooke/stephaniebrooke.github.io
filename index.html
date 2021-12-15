@@ -13,40 +13,40 @@
             </ul>            
         </div><!--app-->
 		
-		<script type="text/javascript" src="https://unpkg.com/vue"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
-		
-		<script type="text/javascript">
-            var app = new Vue({
-                el: '#app',
-                data: {
-                    items: []
-                },
-                mounted: function(){
-                   this.loadItems(); 
-                },
-                methods: {
-                    loadItems: function(){
-                        
-                        // Init variables
-                        var self = this
-                        var app_id = "appqLqRA95U5zfHSb";
-                        var app_key = "replaceME";
-                        this.items = []
-axios.get(
-                            "https://api.airtable.com/v0/"+app_id+"/Listings?view=Grid%20view",
-                            { 
-                                headers: { Authorization: "Bearer "+app_key } 
-                            }
-                        ).then(function(response){
-                            self.items = response.data.records
-                        }).catch(function(error){
-                            console.log(error)
-                        })
-                    }
-                }
-            })
-        </script>
+//		<script type="text/javascript" src="https://unpkg.com/vue"></script>
+//		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+//		
+//		<script type="text/javascript">
+//            var app = new Vue({
+//                el: '#app',
+//                data: {
+//                    items: []
+//                },
+//                mounted: function(){
+//                   this.loadItems(); 
+//                },
+//                methods: {
+//                    loadItems: function(){
+//                        
+//                        // Init variables
+//                        var self = this
+//                        var app_id = "appqLqRA95U5zfHSb";
+//                        var app_key = "replaceME";
+//                        this.items = []
+//axios.get(
+//                            "https://api.airtable.com/v0/"+app_id+"/Listings?view=Grid%20view",
+//                            { 
+//                                headers: { Authorization: "Bearer "+app_key } 
+//                            }
+//                        ).then(function(response){
+//                            self.items = response.data.records
+//                        }).catch(function(error){
+//                            console.log(error)
+//                        })
+//                    }
+//                }
+//            })
+//        </script>
 
 <iframe class="airtable-embed" src="https://airtable.com/embed/shrW5AkgW8NGpBFNh?backgroundColor=green&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>		
 		
